@@ -1,7 +1,5 @@
-<!DOCTYPE html>
-<html lang="en" ng-app>
+<html>
 <head>
-	<title>Speedbag</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
@@ -12,8 +10,13 @@
 	<link rel="stylesheet" href="lib/dist/css/bootstrap-theme.min.css"/>
 	<link rel="stylesheet" href="style/main.css"/>
 	<!-- endbuild -->
-</head>
-<body>
+	<title>Hello World</title>
+
+	
+
+	
+</head>     
+<body ng-app="appCounter">
 	<div class="navbar-wrapper">
 		<div class="container">
 			<div class="navbar navbar-inverse navbar-static-top" role="navigation">
@@ -53,28 +56,32 @@
 	</div>
 	<div class="container home">
 		<div class="page-header">
-			<h1>Contador </h1>
+			<h1>teste </h1>
 			  
-			<div class="container-action">
-				<div class="pull-left btn-size"><button type="button" class="btn btn-lg btn-danger"> <span> - </span> </button></div>
+			<div class="container-action" ng-controller="Controlador">
+				<div class="pull-left btn-size"><button type="button" class="btn btn-lg btn-danger" ng-click="sub(resp)"> <span> - </span> </button></div>
 				<div class="pull-left result">
-					<span class="">1</span>
+					<span ng-style="resp < 0 && {'color': '#D9534F '} || resp > 0 && {'color': '#419641 '}">{{resp}}</span>
 				</div>
-				<div class="pull-left btn-size"><button type="button" class="btn btn-lg btn-success"> <span>+</span> </button></div>
+				<div class="pull-left btn-size"><button type="button" class="btn btn-lg btn-success" ng-click="add(resp)"> <span>+</span> </button></div>
 			</div>
 
 		</div>
 	</div>
-	<!-- <script type="text/javascript">window.version = "VERSION_NUMBER";</script> -->
+
+    
+    <!-- <script type="text/javascript">window.version = "VERSION_NUMBER";</script> -->
 	<!-- build:js js/lib.js -->
 	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<!-- <script type="text/javascript" src="lib/zepto/zepto.js"></script> -->
 	<script type="text/javascript" src="lib/dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="lib/scripts/angular.min.js"></script>
+	<script type="text/javascript" src="js/controller.js"></script>
 
 	<!-- endbuild -->
 	<!-- build:js js/app.js -->
 	<!-- // <script type="text/javascript" src="js/main.js"></script> -->
 	<!-- endbuild -->
+
 </body>
 </html>

@@ -1,10 +1,36 @@
+#wave {
+  position: relative;
+  height: 70px;
+  width: 600px;
+  background: #e0efe3;
+}
+#wave:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 340px;
+  height: 80px;
+  background-color: white;
+  right: -5px;
+  top: 40px;
+}
+#wave:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 300px;
+  height: 70px;
+  background-color: #e0efe3;
+  left: 0;
+  top: 27px;
+}
 body {
   padding-bottom: 40px;
-  background-image: url('/img/background.jpg');
 }
 .home {
-  background-color: #936F25;
-  color: #FFF;
+  color: #000;
   -moz-opacity: 0.70;
   -khtml-opacity: 0.70;
   opacity: 0.70;
